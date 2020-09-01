@@ -6,6 +6,7 @@ from functions import createaccount, login
 init()
 
 print("Test Branch")
+print("Test Branch2")
 
 while True:
     print(colored("\n----- DB Login Test -----", "yellow"))
