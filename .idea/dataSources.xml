@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="profile" uuid="a95f1d94-8c8e-4721-b57a-9d09199deaed">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Jack\Dropbox\python\SQLite3-with-Hashing-Salt\profile.db</jdbc-url>
+    </data-source>
+  </component>
+</project>
