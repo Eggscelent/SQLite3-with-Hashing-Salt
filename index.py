@@ -1,30 +1,29 @@
 import sys
-from termcolor import colored
-from colorama import *
-from functions import createaccount, login
-
-init()
-
+from functions import create_account, login
 def index():
     while True:
-        print(colored("\n----- DB Login Test -----", "yellow"))
+        print("\n----- DB Login Test -----")
 
-        menuvalue = input("""
+        options = {
+            'a': create_account,
+            'b': login,
+            'c': sys.exit
+        }
+
+        menu_value = input("""
         a: Create Account
         b: Login
         c: Exit
-    
-        Please enter your choice [A-C]: """)
 
-        if menuvalue == "A" or menuvalue == "a":
-            createaccount()
-        if menuvalue == "B" or menuvalue == "b":
-            login()
-        if menuvalue == "C" or menuvalue == "c":
-            print(colored("\nTerminating session...", "red"))
-            sys.exit()
-        #else:
-         #   print("You must only enter a letter from the menu")
-         #   print("Please try again")
+        Please enter your choice [A-C]: """).lower()
 
-index()
+        selected_option = options.get(menu_value)
+
+        if selected_option:
+            selected_option()
+        else:
+            print("Invalid choice. Please enter A, B, or C.")
+
+
+if __name__ == "__main__":
+    index()
